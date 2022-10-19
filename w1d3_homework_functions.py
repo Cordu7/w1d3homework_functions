@@ -79,9 +79,12 @@ print(find_by_given_description(tasks, "Dance"))
 def update_task(task_list, description):
     for task in task_list:
         if task["description"]==description:
-            return task_list["completed"],True
+            task["completed"]=True
+        
 
-print(update_task(tasks,"Wash Dishes"))
+update_task(tasks,"Wash Dishes")
+
+print(tasks)
 
     
 
