@@ -16,7 +16,7 @@ def find_uncompeted_task(task_list):
  completed_task= []
 
  for task in task_list:
-  if task["completed"]!=True==True:
+  if task["completed"]!=True:
      completed_task.append(task["description"])
  return(completed_task)
 
@@ -28,7 +28,7 @@ def find_completed_task(task_list):
  completed_task= []
 
  for task in task_list:
-  if task["completed"]==True==True:
+  if task["completed"]==True:
      completed_task.append(task["description"])
  return(completed_task)
 
@@ -76,13 +76,13 @@ print(find_by_given_description(tasks, "Dance"))
 # Extension
 # Given a description update that task to mark it as complete.
 
-def update_task(task_list, description):
+def update_task_to_completed(task_list, description):
     for task in task_list:
         if task["description"]==description:
             task["completed"]=True
         
 
-update_task(tasks,"Wash Dishes")
+update_task_to_completed(tasks,"Wash Dishes")
 
 print(tasks)
 
